@@ -22,7 +22,7 @@ pipeline {
                 }
             }
             steps {
-                powershell 'Compress-Archive -Path lib -DestinationPath sbdl.zip -Force'
+               bat 'python -c "import shutil; shutil.make_archive(\'sbdl\', \'zip\', \'.\', \'lib\')"'
             }
         }
 
